@@ -1,0 +1,7 @@
+name = "IntrinsicDecoherence"
+uuid = "49c90714-c7c2-11eb-178d-39daf97d22d4"
+authors = ["Alejandro R. Urzúa <arurz@inaoep.mx>"]
+version = "0.1.0"
+
+[deps]
+Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
