@@ -158,6 +158,10 @@ begin
 	axs3.plot(t_list, real(texv3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
 	axs3.plot(t_list, real(texv3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
 	
+	axs1.text(70, 0, L"(a)", fontsize=13)
+	axs2.text(70, 0, L"(b)", fontsize=13)
+	axs3.text(70, 0, L"(c)", fontsize=13)
+	
 	axins = axs3.inset_axes([0.4, 0.6, 0.25, 0.25])
 	axins.plot(t_list, real(texv3_a), "r")
 	axins.plot(t_list, real(texv3_a1), "g")
@@ -183,7 +187,7 @@ begin
 	
 	tight_layout()
 	
-	#savefig("γ10_sp.pdf", dpi = 300)
+	#savefig("γ10_sp.png", dpi = 300)
 end
 
 # ╔═╡ 999fd3ea-c248-48f2-8a4b-15dd564710db
@@ -201,6 +205,10 @@ begin
 	axS3.plot(t_lisT, real(texV3_a), "r", lw = 3, label = L"\langle \hat{a} \rangle")
 	axS3.plot(t_lisT, real(texV3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
 	axS3.plot(t_lisT, real(texV3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	
+	axS1.text(7, 0, L"(a)", fontsize=13)
+	axS2.text(7, 0, L"(b)", fontsize=13)
+	axS3.text(7, 0, L"(c)", fontsize=13)
 	
 	#axinS = axS3.inset_axes([0.4, 0.6, 0.25, 0.25])
 	#axinS.plot(t_list, texV3_a, "r")
@@ -227,7 +235,7 @@ begin
 	
 	tight_layout()
 	
-	savefig("γ100_sp.png", dpi = 300)
+	#savefig("γ100_sp.pdf", dpi = 300)
 end
 
 # ╔═╡ d749b3fa-1686-4630-b0cd-e89979d74ee5
