@@ -4,4 +4,6 @@ authors = ["Alejandro R. Urzúa <arurz@inaoep.mx>"]
 version = "0.1.0"
 
 [deps]
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
 Pluto = "c3e4b0f8-55cb-11ea-2926-15256bba5781"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
