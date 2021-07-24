@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.15.1
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -146,17 +146,17 @@ end;
 begin
 	figs, (axs1, axs2, axs3) = subplots(3,1, figsize = (6,10), sharex = true)
 	
-	axs1.plot(t_list, real(texv1_a), "r", lw = 3, label = L"\langle \hat{a} \rangle")
-	axs1.plot(t_list, real(texv1_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axs1.plot(t_list, real(texv1_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axs1.plot(t_list, real(texv1_a), "r", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axs1.plot(t_list, real(texv1_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axs1.plot(t_list, real(texv1_a2), "b", lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
-	axs2.plot(t_list, real(texv2_a), "ro", lw = 3, label = L"\langle \hat{a} \rangle")
-	axs2.plot(t_list, real(texv2_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axs2.plot(t_list, real(texv2_a2), "b", ms = 4, lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axs2.plot(t_list, real(texv2_a), "ro", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axs2.plot(t_list, real(texv2_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axs2.plot(t_list, real(texv2_a2), "b", ms = 4, lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
-	axs3.plot(t_list, real(texv3_a), "r", lw = 3, label = L"\langle \hat{a} \rangle")
-	axs3.plot(t_list, real(texv3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axs3.plot(t_list, real(texv3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axs3.plot(t_list, real(texv3_a), "r", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axs3.plot(t_list, real(texv3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axs3.plot(t_list, real(texv3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
 	axs1.text(70, 0, L"(a)", fontsize=13)
 	axs2.text(70, 0, L"(b)", fontsize=13)
@@ -169,42 +169,42 @@ begin
 	axins.set_xlim([0,5])
 	axins.set_title(L"Close view $0 \leq t \leq 5$", fontsize = 11)
 	
-	axs1.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axs1.get_xticklabels(), fontsize = 13)
-	setp(axs1.get_yticklabels(), fontsize = 13)
+	axs1.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axs1.get_xticklabels(), fontsize = 14)
+	setp(axs1.get_yticklabels(), fontsize = 14)
 	axs1.legend(fontsize = 12)
 	
-	axs2.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axs2.get_xticklabels(), fontsize = 13)
-	setp(axs2.get_yticklabels(), fontsize = 13)
+	axs2.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axs2.get_xticklabels(), fontsize = 14)
+	setp(axs2.get_yticklabels(), fontsize = 14)
 	axs2.legend(fontsize = 12)
 	
 	axs3.set_xlabel(L"t\; [s]", fontsize = 14)
-	axs3.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axs3.get_xticklabels(), fontsize = 13)
-	setp(axs3.get_yticklabels(), fontsize = 13)
+	axs3.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axs3.get_xticklabels(), fontsize = 14)
+	setp(axs3.get_yticklabels(), fontsize = 14)
 	axs3.legend(fontsize = 12)
 	
 	tight_layout()
 	
-	#savefig("γ10_sp.png", dpi = 300)
+	#savefig("γ10_sp.pdf", dpi = 300)
 end
 
 # ╔═╡ 999fd3ea-c248-48f2-8a4b-15dd564710db
 begin
 	figS, (axS1, axS2, axS3) = subplots(3,1, figsize = (6,10), sharex = true)
 	
-	axS1.plot(t_lisT, real(texV1_a), "r", lw = 3, label = L"\langle \hat{a} \rangle")
-	axS1.plot(t_lisT, real(texV1_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axS1.plot(t_lisT, real(texV1_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axS1.plot(t_lisT, real(texV1_a), "r", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axS1.plot(t_lisT, real(texV1_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axS1.plot(t_lisT, real(texV1_a2), "b", lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
-	axS2.plot(t_lisT, real(texV2_a), "ro", lw = 3, label = L"\langle \hat{a} \rangle")
-	axS2.plot(t_lisT, real(texV2_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axS2.plot(t_lisT, real(texV2_a2), "b", ms = 4, lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axS2.plot(t_lisT, real(texV2_a), "ro", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axS2.plot(t_lisT, real(texV2_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axS2.plot(t_lisT, real(texV2_a2), "b", ms = 4, lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
-	axS3.plot(t_lisT, real(texV3_a), "r", lw = 3, label = L"\langle \hat{a} \rangle")
-	axS3.plot(t_lisT, real(texV3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1} \rangle")
-	axS3.plot(t_lisT, real(texV3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2} \rangle")
+	axS3.plot(t_lisT, real(texV3_a), "r", lw = 3, label = L"\langle \hat{a}^{\dagger}\hat{a} \rangle")
+	axS3.plot(t_lisT, real(texV3_a1), "g", lw = 3, label = L"\langle \hat{a}_{1}^{\dagger}\hat{a}_{1} \rangle")
+	axS3.plot(t_lisT, real(texV3_a2), "b", lw = 3, label = L"\langle \hat{a}_{2}^{\dagger}\hat{a}_{2} \rangle")
 	
 	axS1.text(7, 0, L"(a)", fontsize=13)
 	axS2.text(7, 0, L"(b)", fontsize=13)
@@ -217,33 +217,26 @@ begin
 	#axinS.set_xlim([0,5])
 	#axinS.set_title(L"Close view $0 \leq t \leq 5$", fontsize = 11)
 	
-	axS1.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axS1.get_xticklabels(), fontsize = 13)
-	setp(axS1.get_yticklabels(), fontsize = 13)
+	axS1.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axS1.get_xticklabels(), fontsize = 14)
+	setp(axS1.get_yticklabels(), fontsize = 14)
 	axS1.legend(fontsize = 12)
 	
-	axS2.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axS2.get_xticklabels(), fontsize = 13)
-	setp(axS2.get_yticklabels(), fontsize = 13)
+	axS2.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axS2.get_xticklabels(), fontsize = 14)
+	setp(axS2.get_yticklabels(), fontsize = 14)
 	axS2.legend(fontsize = 12)
 	
 	axS3.set_xlabel(L"t\; [s]", fontsize = 14)
-	axS3.set_ylabel(L"\textrm{Number of photons}", fontsize = 14)
-	setp(axS3.get_xticklabels(), fontsize = 13)
-	setp(axS3.get_yticklabels(), fontsize = 13)
+	axS3.set_ylabel(L"\textrm{Number of photons}", fontsize = 16)
+	setp(axS3.get_xticklabels(), fontsize = 14)
+	setp(axS3.get_yticklabels(), fontsize = 14)
 	axS3.legend(fontsize = 12)
 	
 	tight_layout()
 	
-	#savefig("γ100_sp.pdf", dpi = 300)
+	savefig("γ100_sp.png", dpi = 300)
 end
-
-# ╔═╡ d749b3fa-1686-4630-b0cd-e89979d74ee5
-# TO-DO
-
-# Reescribir en funciones separadas para los exponenciales de exponenciales
-# Documentar el código
-# Hacer dos gráficas para γ = {10, 100} y g = {0.1, 0.5, 1}
 
 # ╔═╡ 00000000-0000-0000-0000-000000000001
 PLUTO_PROJECT_TOML_CONTENTS = """
@@ -399,6 +392,5 @@ version = "1.2.0"
 # ╠═d98d4cea-e6cc-4e22-8f66-ad1ba8910ae0
 # ╠═e78dafc3-eb16-48f2-86b1-b323f7b97f2d
 # ╠═999fd3ea-c248-48f2-8a4b-15dd564710db
-# ╠═d749b3fa-1686-4630-b0cd-e89979d74ee5
 # ╟─00000000-0000-0000-0000-000000000001
 # ╟─00000000-0000-0000-0000-000000000002
