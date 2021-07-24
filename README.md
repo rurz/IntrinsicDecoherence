@@ -1,5 +1,7 @@
 # Intrinsic Decoherence
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rurz/IntrinsicDecoherence/HEAD?urlpath=lab)
+
 **Support repository for the upcoming article on the energy distribution via instrinsic decoherence in the three-coupled harmonic oscillator.**
 
 Contains the script `Funcs.jl` who have the full definitions of the expectation values evolution on time for each of the oscillator, i.e ⟨â⟩(t)
