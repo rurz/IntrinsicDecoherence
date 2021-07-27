@@ -52,4 +52,8 @@ julia> lineplot(tlist, exv)
 who confirms that ⟨âᵀ₁â₁⟩(t)(0) = α² —this is, the initial condition |α⟩₁ for the oscillator in 1.
 
 ___
-Alejandro R. Urzúa (2021) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rurz/IntrinsicDecoherence)
+Alejandro R. Urzúa (2021)
+
+Cite as: Urzúa, A. R. (2021). rurz/IntrinsicDecoherence: Alpha release (v0.1.0-alpha) [Computer software]. Zenodo. https://doi.org/10.5281/ZENODO.5131447 
+
+ [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rurz/IntrinsicDecoherence)
