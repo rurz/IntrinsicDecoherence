@@ -1,4 +1,4 @@
-expor ann_a, num_a
+expor ann_a num_a
 
 ann_a(α, λ, ω, γ, t) = (α + (λ/ω)) * exp(-γ * t * exp(-1im * ω/γ)) - (λ/ω)
 
