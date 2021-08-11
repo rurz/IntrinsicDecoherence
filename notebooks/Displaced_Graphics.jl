@@ -27,41 +27,44 @@ begin
 end;
 
 # ╔═╡ fb33fbf6-73e2-4e8f-891e-19b7fb8db5dd
-t1 = range(0, stop = 10, length = 500);
+t1 = range(0, stop = 7, length = 500);
 
 # ╔═╡ aa43212b-f5f9-4fad-909d-5081ede80e21
 begin
-	tann1 = [ann_a(α, 0.1, ω, 3, t1[τ]) for τ in 1:length(t1)];
-	tann2 = [ann_a(α, 0.5, ω, 3, t1[τ]) for τ in 1:length(t1)];
-	tann3 = [ann_a(α, 1, ω, 3, t1[τ]) for τ in 1:length(t1)];
-end
+	tann1 = [quad_a(α, 0.1, ω, 10, t1[τ]) for τ in 1:length(t1)];
+	tann2 = [quad_a(α, 0.7, ω, 10, t1[τ]) for τ in 1:length(t1)];
+	tann3 = [quad_a(α, 1.5, ω, 10, t1[τ]) for τ in 1:length(t1)];
+end;
 
 # ╔═╡ 84e0e33b-d58f-4b85-a770-cec5da2d59d1
 begin
 	figreim1 = figure(figsize = (10, 6))
 	axreim1 = gca()
 	
-	axreim1.plot(t1, real(tann2), "b", lw = 3, label = L"\mathrm{Re}\{\langle\hat{a}\rangle\}")
-	axreim1.plot(t1, imag(tann2), "g", lw = 3, label = L"\mathrm{Im}\{\langle\hat{a}\rangle\}")
+	axreim1.plot(t1, real(tann1), "r", lw = 3, label = L"\lambda = 0.1")
+	axreim1.plot(t1, real(tann2), "g", lw = 3, label = L"\lambda = 0.7")
+	axreim1.plot(t1, real(tann3), "b", lw = 3, label = L"\lambda = 1.5")
+	
+	#axreim1.set_ylim([-9, 9])
 	
 	axreim1.legend(fontsize = 18)
 	axreim1.set_ylabel(L"\textrm{Amplitude}", fontsize = 20)
 	axreim1.set_xlabel(L"t\; [s]", fontsize = 18)
 	setp(axreim1.get_xticklabels(), fontsize = 18)
 	setp(axreim1.get_yticklabels(), fontsize = 18)
-	axreim1.set_title(L"Expectation value of $\langle\hat{a}\rangle$", fontsize = 18)
+	axreim1.set_title(L"Expectation value of $\langle\hat{a}^{\dagger}+\hat{a}\rangle$", fontsize = 18)
 	
 	tight_layout()
 	
-	#savefig("aex.pdf", dpi = 600)
+	#savefig("quadex.pdf", dpi = 600)
 end
 
 # ╔═╡ 98a14d54-30c0-4526-b791-8991d86c8ceb
 begin
 	tnum1 = [num_a(α, 0.1, ω, 10, t1[τ]) for τ in 1:length(t1)];
-	tnum2 = [num_a(α, 0.5, ω, 10, t1[τ]) for τ in 1:length(t1)];
-	tnum3 = [num_a(α, 1, ω, 10, t1[τ]) for τ in 1:length(t1)];
-end
+	tnum2 = [num_a(α, 0.7, ω, 10, t1[τ]) for τ in 1:length(t1)];
+	tnum3 = [num_a(α, 1.5, ω, 10, t1[τ]) for τ in 1:length(t1)];
+end;
 
 # ╔═╡ 526a3122-2c23-4939-a4d6-b89e4bfb8c92
 begin
@@ -69,10 +72,10 @@ begin
 	axnum = gca()
 	
 	axnum.plot(t1, real(tnum1), "r", lw = 3, label = L"\lambda = 0.1")
-	axnum.plot(t1, real(tnum2), "g", lw = 3, label = L"\lambda = 0.5")
-	axnum.plot(t1, real(tnum3), "b", lw = 3, label = L"\lambda = 1")
+	axnum.plot(t1, real(tnum2), "g", lw = 3, label = L"\lambda = 0.7")
+	axnum.plot(t1, real(tnum3), "b", lw = 3, label = L"\lambda = 1.5")
 	
-	axnum.set_ylim([16, 19.5])
+	axnum.set_ylim([16, 21.5])
 	
 	axnum.legend(fontsize = 18)
 	axnum.set_ylabel(L"\textrm{Number of Photons}", fontsize = 20)

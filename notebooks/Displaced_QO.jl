@@ -20,7 +20,7 @@ end
 
 # ╔═╡ ccd42b7b-0c0c-4bb8-b3f0-fa424bbf127c
 begin 
-	const dim = 30
+	const dim = 50
 
 	fbasis = FockBasis(dim)
 end
@@ -41,18 +41,19 @@ tlist = [0:0.05:10;];
 ψ₀(α) = coherentstate(fbasis, α);
 
 # ╔═╡ b7cb690e-3e0e-4855-97af-5015ac354fa2
-tout, ψₜ = timeevolution.schroedinger(tlist, ψ₀(4), H(4, 0.1));
+tout, ψₜ = timeevolution.schroedinger(tlist, ψ₀(4), H(4, 0.7));
 
 # ╔═╡ cc571d2a-3abe-4c07-a64d-9799b5aef844
 begin
 	ev1 = expect(n, ψₜ)
-	ev2 = expect(a, ψₜ)
+	ev2 = expect(dagger(a)+a, ψₜ)
 end;
 
 # ╔═╡ 45e61eba-9dbe-4322-8924-155058f90a02
 begin
-	plot(tout, ev1)
-	plot(tout, ev2)
+	fig, (ax1, ax2) = subplots(2, 1, figsize = (6,10))
+	ax1.plot(tout, ev1)
+	ax2.plot(tout, ev2)
 end
 
 # ╔═╡ Cell order:
