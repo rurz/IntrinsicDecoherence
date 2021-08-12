@@ -1,4 +1,4 @@
-export ann_a, num_a, quad_a, quads_a
+export ann_a, num_a, quad_a, quads_a, nums_a
 
 ann_a(α, λ, ω, γ, t) = (α + (λ/ω)) * exp(-γ * t * exp(-1im * ω/γ)) - (λ/ω)
 
@@ -10,3 +10,5 @@ num_a(α, λ, ω, γ, t) = abs2(α) + (λ/ω) * (α + conj(α)) + 2 * (λ/ω)^2 
 ν(r) = sinh(r)
 
 quads_a(α, r, λ, ω, γ, t) = (μ(r) * conj(α) + ν(r) * α + (λ/ω)) * exp(-γ * t * (1 - exp(1im * ω/γ))) + (μ(r) * α + ν(r) * conj(α) + (λ/ω)) * exp(-γ * t * (1 - exp(-1im * ω/γ))) - 2 * (λ/ω)
+
+nums_a(α, r, λ, ω, γ, t) = ((μ(r)^2 + ν(r)^2) * abs2(α) + μ(r) * ν(r) * (conj(α)^2 + α^2) + (λ/ω) * (μ(r) + ν(r)) * (α + conj(α)) + 2 * (λ/ω)^2 + ν(r)^2) - (λ/ω) * ((μ(r) * conj(α) + ν(r) * α + (λ/ω)) * exp(-γ * t * (1 - exp(1im * ω/γ))) + (μ(r) * α + ν(r) * conj(α) + (λ/ω)) * exp(-γ * t * (1 - exp(-1im * ω/γ))))
