@@ -22,10 +22,14 @@ end
 
 # ╔═╡ 198df15f-890d-44f6-bb13-d9cde21c0e8a
 begin
-	const α = 2 + 5im
+	const α = 4
 	const r = 0.3
+	const θ = 0.7
 	const ω = 4
 end;
+
+# ╔═╡ d6e75e6a-1ad0-4449-81a0-f52e891e0446
+
 
 # ╔═╡ be4e4005-6372-4d95-8c40-d9eb7d6a91f4
 tlist = range(0, stop = 7, length = 500);
@@ -98,6 +102,7 @@ end
 # ╠═6fc66216-fa46-11eb-27bc-8fcb9143502c
 # ╠═46d9d011-ad41-49fb-aea0-8a55e93d97b5
 # ╠═198df15f-890d-44f6-bb13-d9cde21c0e8a
+# ╠═d6e75e6a-1ad0-4449-81a0-f52e891e0446
 # ╠═be4e4005-6372-4d95-8c40-d9eb7d6a91f4
 # ╠═1af1ee37-55e5-4f9f-b7bc-896a52ffdc8f
 # ╠═0ce11282-0612-4236-91ea-8fd0a17b1fc6
