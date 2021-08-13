@@ -62,6 +62,38 @@ begin
 	#savefig("quads.pdf", dpi = 600)
 end
 
+# ╔═╡ e0492707-23ea-44bf-8530-4fe0df014f76
+begin
+	tSq1 = [nums_a(α, r, 0.1, ω, 10, tlist[τ]) for τ in 1:length(tlist)];
+	tSq2 = [nums_a(α, r, 0.7, ω, 10, tlist[τ]) for τ in 1:length(tlist)];
+	tSq3 = [nums_a(α, r, 1.5, ω, 10, tlist[τ]) for τ in 1:length(tlist)];
+end;
+
+# ╔═╡ 0c1b4982-ad06-44d2-89b7-e4fab429521b
+begin
+	figreim2 = figure(figsize = (10, 6))
+	axreim2 = gca()
+	
+	axreim2.plot(tlist, real(tSq1), "r", lw = 3, label = L"\lambda = 0.1")
+	axreim2.plot(tlist, real(tSq2), "g", lw = 3, label = L"\lambda = 0.7")
+	axreim2.plot(tlist, real(tSq3), "b", lw = 3, label = L"\lambda = 1.5")
+	
+	#axreim1.set_ylim([-9, 9])
+	
+	axreim2.text(4.5,22.7, L"r = 0.3", fontsize = 20)
+	
+	axreim2.legend(fontsize = 18)
+	axreim2.set_ylabel(L"\textrm{Amplitude}", fontsize = 20)
+	axreim2.set_xlabel(L"t\; [s]", fontsize = 18)
+	setp(axreim2.get_xticklabels(), fontsize = 18)
+	setp(axreim2.get_yticklabels(), fontsize = 18)
+	axreim2.set_title(L"Expectation value of $\langle\hat{a}^{\dagger}\hat{a}\rangle$", fontsize = 18)
+	
+	tight_layout()
+	
+	#savefig("nums.pdf", dpi = 600)
+end
+
 # ╔═╡ Cell order:
 # ╠═6fc66216-fa46-11eb-27bc-8fcb9143502c
 # ╠═46d9d011-ad41-49fb-aea0-8a55e93d97b5
@@ -69,3 +101,5 @@ end
 # ╠═be4e4005-6372-4d95-8c40-d9eb7d6a91f4
 # ╠═1af1ee37-55e5-4f9f-b7bc-896a52ffdc8f
 # ╠═0ce11282-0612-4236-91ea-8fd0a17b1fc6
+# ╠═e0492707-23ea-44bf-8530-4fe0df014f76
+# ╠═0c1b4982-ad06-44d2-89b7-e4fab429521b
