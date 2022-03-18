@@ -1,0 +1,16 @@
+ # This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Instrinsic Decoherence in Quantum System
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - given-names: Alejandro R.
+    family-names: Urzua
+    email: arurz@inaoep.mx
+    affiliation: 'Instituto Nacional de Astrof\'isica, \'Optica y Electr\'onica'
+    orcid: 'https://orcid.org/0000-0002-6255-5453'
+version: 0.1.0
+date-released: 2021-07-23
+url: "https://github.com/rurz/IntrinsicDecogerence"
