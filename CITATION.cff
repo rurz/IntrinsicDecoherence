@@ -1,4 +1,4 @@
- # This CITATION.cff file was generated with cffinit.
+# This CITATION.cff file was generated with cffinit.
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
@@ -9,8 +9,8 @@ authors:
   - given-names: Alejandro R.
     family-names: Urzua
     email: arurz@inaoep.mx
-    affiliation: 'Instituto Nacional de Astrof\'isica, \'Optica y Electr\'onica'
+    affiliation: 'Instituto Nacional de Astrofísica, Óptica y Electrónica'
     orcid: 'https://orcid.org/0000-0002-6255-5453'
 version: 0.1.0
 date-released: 2021-07-23
-url: "https://github.com/rurz/IntrinsicDecogerence"
+url: "https://github.com/rurz/IntrinsicDecoherence"
