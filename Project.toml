@@ -1,0 +1,7 @@
+[deps]
+DelimitedFiles = "8bb1440f-4735-579b-a4ab-409b98df4dab"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
+IJulia = "7073ff75-c697-5162-941a-fcdaad2a7d2a"
+LaTeXStrings = "b964fa9f-0449-5b57-a5c2-d3ea65f4040f"
+PyPlot = "d330b81b-6aea-500a-939a-2ce795aea3ee"
+QuantumOptics = "6e0679c1-51ea-5a7c-ac74-d61b76210b0c"

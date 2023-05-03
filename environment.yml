@@ -1,0 +1,10 @@
+name: IntrinsicDecoherence
+channels:
+  - conda-forge
+dependencies:
+  - mpmath
+  - matplotlib
+  - numpy
+  - pip
+  - pip:
+      - julia
