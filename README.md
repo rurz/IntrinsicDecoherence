@@ -1,6 +1,8 @@
 # Intrinsic Decoherence in Quantum Systems
 
 ### Alejandro R. Urzúa and Héctor M. Moya-Cessa
+
+Launch MyBinder server [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/rurz/IntrinsicDecoherence/HEAD?urlpath=lab) to get an interactive view of the working notebooks
 ---
 - Fundamentals:
 - Aim:
